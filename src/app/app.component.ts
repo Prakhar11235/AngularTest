@@ -40,6 +40,7 @@ export class AppComponent {
   submitForm(){
     if(this.userForm.valid){
       console.log(this.userForm.value);
+      console.log(this.userForm.value.name);
     }
   }
 }

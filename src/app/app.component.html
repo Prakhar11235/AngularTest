@@ -1,8 +1,21 @@
+
+<nav>
+    <a href="/">Home</a>
+    
+    <a href="/contact">Contact</a>
+    
+    <a href="/about">About</a>
+  </nav>
+  <router-outlet />
 <div class="main">
 <form [formGroup]="userForm" (ngSubmit)="submitForm()" style="padding:50px">
+  
+    <div *ngIf="isLoading" class="spinner-container">
+    <mat-spinner diameter="40"></mat-spinner>
+  
+  </div>
   <div>
-    <div class="heading "><h2>Sign Up</h2></div>
-    
+    <div class="heading "><h2>{{"sign Up" | Capitalize}}</h2></div>
     <input 
       type="text"
       id="name"
@@ -14,19 +27,10 @@
     @if (userForm.get('name')?.invalid &&(userForm.get('name')?.dirty || userForm.get('name')?.touched)){
       <div class="alert alert-danger">
         @if(userForm.get('name')?.hasError('minlength')){
-          <div>
+          
             Name must be at least 4 characters long.
-          </div>
+          
         }
-      </div>
-    }
-    @if(userForm.value.name===""){
-      <div class="alert alert-danger">
-        
-          
-            Name must be at least 4 characters long.
-          
-        
       </div>
     }
   </div>
@@ -59,9 +63,17 @@
         }
       </div>
     }
+  
   <div class="submitBtn">
-    <button type="submit" [disabled]="!userForm.valid">Submit</button>
+    <button type="submit" mat-raised-button color="primary" [disabled]="!userForm.valid">Submit</button>
   </div>
   
 </form>
+
+<!-- <h1>API Test</h1>
+<button (click)="callSuccessApi()">Call Success API</button>
+<button (click)="callFailApi()">Call Fail API</button>
+
+<router-outlet /> -->
+
 </div>

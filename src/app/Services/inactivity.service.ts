@@ -27,9 +27,12 @@ export class InactivityService {
       .pipe(
         startWith(null),
         switchMap(() => timer(10_000)) 
+        // debounce
       )
       .subscribe(() => {
+        
         this.inactivity$.next();
+        
       });
   }
 }

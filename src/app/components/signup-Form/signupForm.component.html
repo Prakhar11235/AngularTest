@@ -1,0 +1,77 @@
+<div class="landing-container">
+  <div class="image-container">
+    <img ngSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrBBmitoegRHfQGnb7N4LwGxvsgOtG_xfOnw&s" height="700" width="700" priority/>
+  </div>
+  <div class="form-container">
+    <div class="main">
+<form [formGroup]="userForm" (ngSubmit)="submitForm()" style="padding:50px">
+  
+    <div *ngIf="isLoading" class="spinner-container">
+    <mat-spinner diameter="40"></mat-spinner>
+  
+  </div>
+  <div>
+    <div class="heading "><h2>{{"sign Up" | Capitalize}}</h2></div>
+    <input 
+      type="text"
+      id="name"
+      name="name"
+      formControlName="name"
+      placeholder="Name"
+      required
+    >
+    @if (userForm.get('name')?.invalid &&(userForm.get('name')?.dirty || userForm.get('name')?.touched)){
+      <div class="alert alert-danger">
+        @if(userForm.get('name')?.hasError('minlength')){
+          
+            Name must be at least 2 characters long.
+          
+        }
+      </div>
+    }
+  </div>
+  <div>
+    
+    <input 
+      type="text"
+      id="email"
+      name="email"
+      formControlName="email"
+      placeholder="Email"
+    />
+  </div>
+  <div>
+    
+    <input 
+      type="address"
+      id="address"
+      name="address"
+      formControlName="address"
+      placeholder="Address"
+    />
+  </div>
+  @if (userForm.get('address')?.invalid &&(userForm.get('address')?.dirty || userForm.get('address')?.touched)){
+      <div class="alert alert-danger">
+        @if(userForm.get('address')?.hasError('minlength')){
+          <div>
+            Address must be at least 5 characters long.
+          </div>
+        }
+      </div>
+    }
+  
+  <div class="submitBtn">
+    <button type="submit" mat-raised-button color="primary" [disabled]="!userForm.valid">Submit</button>
+  </div>
+  
+</form>
+
+<!-- <h1>API Test</h1>
+<button (click)="callSuccessApi()">Call Success API</button>
+<button (click)="callFailApi()">Call Fail API</button>
+
+<router-outlet /> -->
+
+</div>
+</div>
+</div>

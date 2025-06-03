@@ -38,18 +38,19 @@ body {
 /* Form styling */
 form {
     background-color: beige;
-    border-radius: 10px;
-    box-shadow: 4px 3px #eae4e3;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 24px;
     width: 100%;
     max-width: 250px;
+    
 }
 
 /* Inputs and buttons */
 input, button {
-    margin: 10px 0;
+    margin: 16px 0;
     padding: 10px;
-    width: 100%;
+    width: 90%;
 }
 
 /* Button */
@@ -93,22 +94,36 @@ nav{
     background-color: beige;
     height: 32px;
 }
+.home-container{
+    height: 100vh;
+    width: 100vh;
+}
 
-/* Responsive tweaks */
-@media (max-width: 600px) {
-    .main {
-        padding: 8px;
-    }
+// landing page UI
+.landing-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px;
+  gap: 40px;
+  background-color: #f9f9f9;
+}
 
-    form {
-        padding: 16px;
-    }
+.image-container{
+    position: relative;
+}
 
-    input, button {
-        font-size: 0.95rem;
-    }
+.image-container img {
+  width: 400px;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+//   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
-    h2 {
-        font-size: 1.5rem;
-    }
+.form-container {
+  flex: 1;
+  max-width: 600px;
+  
 }

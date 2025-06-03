@@ -5,13 +5,5 @@ import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@a
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 // import { ErrorInterceptor } from './app/interceptors/error.interceptor';
 
-bootstrapApplication(AppComponent,{
-  providers:[
-    provideHttpClient(withInterceptorsFromDi()), provideAnimationsAsync(),
-    // {
-    //   provide: HTTP_INTERCEPTORS,
-    //   useClass: ErrorInterceptor,
-    //   multi: true,
-    // }
-  ]
-}).catch((err) => console.error(err));
+bootstrapApplication(AppComponent,appConfig
+).catch((err) => console.error(err));

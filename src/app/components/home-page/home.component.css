@@ -1,0 +1,39 @@
+.sidenav-container {
+      height: 100vh;
+    }
+    .sidenav {
+      width: 200px;
+    }
+    .main-content {
+      padding: 16px;
+    }
+    .active {
+      font-weight: bold;
+      color: #d35400;
+    }
+    .list{
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      height:100vh;
+    }
+    .inspiration{
+        padding: 8px;
+        height: 100px;
+        width: 300px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+    }
+    .quote{
+        height: 60%;
+        
+        max-width: 290px;
+        padding:8px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;   /* Modern standard */
+        white-space: normal; 
+    }
+    .author{
+        font-style: italic;
+        
+    }

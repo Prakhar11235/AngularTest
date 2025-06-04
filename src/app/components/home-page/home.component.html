@@ -1,0 +1,36 @@
+<mat-sidenav-container class="sidenav-container">
+      <mat-sidenav mode="side" [(opened)]="opened" class="sidenav">
+        
+        <mat-nav-list>
+          <div class="list">
+            <div class="top">
+              <a mat-list-item routerLink="/home" routerLinkActive="active">Home</a>
+              <a mat-list-item routerLink="/about" routerLinkActive="active">About</a>
+              <a mat-list-item routerLink="/contact" routerLinkActive="active">Contact Us</a>
+            </div>
+            <div class="bottom">
+              <a mat-list-item routerLink="/" routerLinkActive="active">Log Out</a>
+            </div>
+          </div>
+        </mat-nav-list>
+      </mat-sidenav>
+
+      <mat-sidenav-content>
+        <mat-toolbar style="background-color: chocolate">
+          <button (click)="opened=!opened">
+            <mat-icon>menu</mat-icon>
+          </button>
+          
+          
+        </mat-toolbar>
+        <div class="main-content">
+          <h1>Home Page</h1>
+          <div class="inspiration">
+            @defer{<div class="quote"><p>{{quote}}</p></div>
+            <div class="author"><p>~{{author}}</p></div>}
+            @placeholder(minimum 2s) {<ngx-skeleton-loader count="3" appearance="line" />}
+          </div>
+          <router-outlet></router-outlet>
+        </div>
+      </mat-sidenav-content>
+    </mat-sidenav-container>

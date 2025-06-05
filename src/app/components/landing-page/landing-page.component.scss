@@ -1,0 +1,101 @@
+
+
+.landingContainer{
+    height: 100vh;
+    width: 100vw;
+    //background-image: url(https://wallpapers.com/images/hd/animated-space-1920-x-1280-background-jn1ps9h3m5vi04ss.jpg);
+    
+    background-image: linear-gradient(#050029,#1a3669);
+}
+nav{
+    padding: 16px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: beige;
+    height: 32px;
+    background: none;
+    
+}
+.options{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.options p{
+    margin: 16px;
+}
+.productName{
+    font-size: x-large;
+    font-weight: bold;
+    margin: 8px;
+    display: flex;
+    align-items: center;
+
+}
+
+.productName p{
+    margin: 8px;
+}
+.signupBtn{
+    margin: 8px;
+    padding: 8px;
+    border: none;
+    border-radius:16px;
+}
+p{
+    text-align: center;
+    color: aliceblue;
+}
+.moon{
+    position: absolute;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    top: 35%;
+    left:15%;
+    box-shadow: 0px 0px 100px rgba($color: white, $alpha: 1);   
+}
+.content{
+   position: absolute;
+   top: 40%;
+   left:50%;
+   
+   
+}
+h1{
+    padding-bottom: 6px;
+    margin-bottom:26px ;
+    color: aliceblue;
+    font-size: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 5px solid aliceblue;
+    animation: typewriter 2s steps(30) forwards ,blink 1s steps(20) infinite normal;
+    
+}
+button{
+    padding: 12px 40px;
+    border: none;
+    border-radius: 8px;
+    color: rgb(12, 65, 87);
+    font-size:medium;
+    
+}
+@keyframes typewriter{
+    from{
+        width: 0%;
+        
+    }
+    to{
+        width: 100%;
+      
+    }
+}
+@keyframes blink {
+    from{
+        border-color: aliceblue;
+    }to{
+        border-color: #1a3669;
+    }
+}

@@ -11,7 +11,7 @@ import { NgOptimizedImage } from '@angular/common';
 @Component({
   selector: 'app-signup',
   standalone: true,
-  imports: [ReactiveFormsModule, MatProgressSpinnerModule, CommonModule,MyCustomPipe,RouterOutlet,NgOptimizedImage],
+  imports: [ReactiveFormsModule, MatProgressSpinnerModule, CommonModule,MyCustomPipe,NgOptimizedImage],
   templateUrl:'./signupForm.component.html',
   styleUrl: '../../app.component.scss'
 })

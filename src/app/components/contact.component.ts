@@ -9,7 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 @Component({
   standalone: true,
   selector: 'app-home',
-  imports: [RouterOutlet, RouterLink, NgIf,MatSidenavModule,MatToolbarModule,MatIconModule,MatListModule],
+  imports: [RouterOutlet, RouterLink,MatSidenavModule,MatToolbarModule,MatIconModule,MatListModule],
   template: `
     <mat-sidenav-container class="sidenav-container">
       <mat-sidenav mode="side" [(opened)]="opened" class="sidenav">

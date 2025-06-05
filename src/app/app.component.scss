@@ -23,7 +23,7 @@ body {
 
 /* Layout */
 .main {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,13 +87,7 @@ button:hover {
     align-items: center;
     margin-bottom: 16px;
 }
-nav{
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: beige;
-    height: 32px;
-}
+
 .home-container{
     height: 100vh;
     width: 100vh;
@@ -127,3 +121,4 @@ nav{
   max-width: 600px;
   
 }
+

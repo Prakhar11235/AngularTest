@@ -7,9 +7,6 @@ import { CommonModule } from '@angular/common';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import {SignupComponent} from './components/signup-Form/signupForm.component';
-import { NgOptimizedImage } from '@angular/common';
-// import { SignupComponent } from './components/signupForm.component';
 
 @Component({
   selector: 'app-root',
@@ -22,8 +19,6 @@ import { NgOptimizedImage } from '@angular/common';
     MatDialogModule,
     MatButtonModule,
     CommonModule,
-    NgOptimizedImage,
-    SignupComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

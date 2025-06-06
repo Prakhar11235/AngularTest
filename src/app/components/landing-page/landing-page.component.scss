@@ -5,7 +5,7 @@
     width: 100vw;
     //background-image: url(https://wallpapers.com/images/hd/animated-space-1920-x-1280-background-jn1ps9h3m5vi04ss.jpg);
     
-    background-image: linear-gradient(#050029,#1a3669);
+    background-image: linear-gradient(#083466,#084783);
 }
 nav{
     padding: 16px;
@@ -54,7 +54,9 @@ p{
     width: 200px;
     top: 35%;
     left:15%;
-    box-shadow: 0px 0px 100px rgba($color: white, $alpha: 1);   
+    box-shadow: 0px 0px 100px rgba($color: white, $alpha: 1); 
+    animation: zoom 2s forwards linear;
+    transition: transform 1s;
 }
 .content{
    position: absolute;
@@ -82,6 +84,43 @@ button{
     font-size:medium;
     
 }
+.sky {
+    position: absolute;
+    width: 100%;
+    height: 200px; /* Adjust as needed */
+    overflow: hidden;
+    bottom: 0%;
+}
+
+.cloud {
+    position: absolute;
+    display: flex;
+    width: 200%;
+}
+.cloud img{
+    width: 50%;
+    
+}
+
+.cloud2 {
+    bottom: -4%;
+    z-index: 3;
+    animation: driftRight 80s linear infinite;
+    //opacity: .7;
+}
+
+
+.cloud1 {
+    bottom: 5%;
+    z-index: 2; /* behind cloud2 */
+}
+
+.cloud3 {
+    bottom: 17%;
+    z-index: 1; /* behind both */
+    animation: driftLeft 110s linear infinite;
+}
+
 @keyframes typewriter{
     from{
         width: 0%;
@@ -99,3 +138,33 @@ button{
         border-color: #1a3669;
     }
 }
+@keyframes driftRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes driftLeft {
+    0%{
+        transform:translateX(0%);  
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+@keyframes zoom {
+    from{
+        scale: .8;
+    }
+    to{
+        scale:1;
+    }
+}
+
+
+
+
+
+

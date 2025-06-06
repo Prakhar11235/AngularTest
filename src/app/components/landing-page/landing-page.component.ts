@@ -1,4 +1,11 @@
 import { Component } from '@angular/core';
+import { NgParticlesService } from "@tsparticles/angular";
+// import {
+//   MoveDirection,
+//   ClickMode,
+//   HoverMode,
+//   OutMode,
+// } from "@tsparticles/engine";
 
 @Component({
   selector: 'app-landing-page',

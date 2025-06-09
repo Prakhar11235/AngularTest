@@ -22,7 +22,8 @@ import { MatIconModule } from '@angular/material/icon';
       </mat-sidenav>
 
       <mat-sidenav-content>
-        <mat-toolbar style="background-color: chocolate">
+        <mat-toolbar style="background-color: #083c72; ">
+    
           <button (click)="opened=!opened">
             <mat-icon>menu</mat-icon>
           </button>  

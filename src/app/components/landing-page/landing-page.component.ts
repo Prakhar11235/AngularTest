@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { NgParticlesService } from "@tsparticles/angular";
 // import {
 //   MoveDirection,
@@ -15,5 +16,8 @@ import { NgParticlesService } from "@tsparticles/angular";
   styleUrl: './landing-page.component.scss'
 })
 export class LandingPageComponent {
-
+  router = inject(Router);
+  OnGetStarted(){
+    this.router.navigateByUrl('/signup');
+  }
 }

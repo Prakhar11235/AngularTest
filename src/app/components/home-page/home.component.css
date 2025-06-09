@@ -4,12 +4,15 @@
     .sidenav {
       width: 200px;
     }
+    mat-toolbar{
+      background-color: #083c72;
+    }
     .main-content {
       padding: 16px;
     }
     .active {
       font-weight: bold;
-      color: #d35400;
+      color:#08437d;
     }
     .list{
       display:flex;

@@ -5,7 +5,7 @@
       <p>Link1</p>
       <p>Link2</p>
       <p>Link3</p>
-      <button class="signupBtn">Sign-up</button>
+      <button class="signupBtn btn" (click)="OnGetStarted()">Sign-up</button>
     </div>
   </nav>
   <!-- <ng-particles
@@ -21,7 +21,7 @@
   />
   <div class="content">
     <h1>Where Goodness begins!</h1>
-    <button>Get Started</button>
+    <button (click)="OnGetStarted()" class="btn">Get Started</button>
   </div>
   <div class="sky">
     <div class="cloud cloud2">
@@ -37,6 +37,7 @@
       <img src="../../../assets/clouds3.png" alt="dark" />
       <img src="../../../assets/clouds3.png" alt="dark" />
     </div>
+    
     
   </div>
 </div>
